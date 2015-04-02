@@ -230,8 +230,9 @@ private List<Prestamo> listaPrestamos  = new ArrayList<Prestamo>();
 	}	
 	
 	
-	//Generar cuotas para un préstamo (devuelve una lista de cuotas)
-	
+	//Generar cuotas para un prÃ©stamo (devuelve una lista de cuotas)
+	//FALTA TERMINAR ESTE METODO , LO TENGO Q PENSAR UN POCO MAS JAJA
+		
 		public List<Cuota> generarCuotas(Prestamo prestamo)throws Exception{
 			
 			Cuota c = null;
