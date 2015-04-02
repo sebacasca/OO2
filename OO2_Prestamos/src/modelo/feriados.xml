@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    <feriado><anio>2015</anio><mes>0</mes><dia>1</dia></feriado>	//1° de Enero
+    <feriado><anio>2015</anio><mes>1</mes><dia>16</dia></feriado>	//Carnaval
+    <feriado><anio>2015</anio><mes>1</mes><dia>17</dia></feriado>	//Carnaval
+    <feriado><anio>2015</anio><mes>2</mes><dia>23</dia></feriado>	//Puente turístico
+    <feriado><anio>2015</anio><mes>2</mes><dia>24</dia></feriado>	//Dia nacional de la Verdad, la Memoria y la Justicia
+    <feriado><anio>2015</anio><mes>3</mes><dia>2</dia></feriado>	//Día del veterano y los caidos en Malvinas
+    
+
+//PARA TERMINAR LA LISTA DE FERIADOS 2015
+
+</root>
