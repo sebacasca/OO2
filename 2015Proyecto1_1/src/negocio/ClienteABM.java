@@ -35,11 +35,10 @@ public class ClienteABM {
 	public int agregar(String apellido, String nombre, int dni,GregorianCalendar fechaDeNacimiento) throws Exception{
 		
 		Cliente c=new Cliente(apellido, nombre, dni,fechaDeNacimiento);
-		long idCliente= c.getIdCliente();
 		
 		//consultar si existe un cliente con el mismo dni, si existe arrojar la Excepcion
 		
-		if(c.getDni()==dni && c.getIdCliente()==idCliente){
+		if(dao.traerCliente(dni) !=null){
 			
 			throw new Exception("Cliente ya existentente");
 		}

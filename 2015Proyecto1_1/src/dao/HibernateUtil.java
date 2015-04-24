@@ -9,6 +9,7 @@ import org.hibernate.service.ServiceRegistryBuilder;
 public class HibernateUtil{
 
 	private static SessionFactory sessionFactory;
+	
 	public static SessionFactory getSessionFactory() {
 	
 	try{

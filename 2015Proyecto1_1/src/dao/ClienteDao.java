@@ -1,9 +1,11 @@
 package dao;
 
 import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
 import datos.Cliente;
 
 public class ClienteDao {
@@ -95,7 +97,7 @@ public class ClienteDao {
 		
 		try {
 			iniciaOperacion();
-			objeto = (Cliente) session.get(Cliente.class, dni);
+			objeto = (Cliente) session.createQuery("from Cliente c where c.dni ="+ Integer.toString(dni)).uniqueResult();
 
 		} finally {
 			session.close();
@@ -104,13 +106,14 @@ public class ClienteDao {
 	return objeto;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Cliente> traerCliente() throws HibernateException {
 		
 		List<Cliente> lista=null;
 
 		try {
 			iniciaOperacion();
-			lista=session.createQuery("from Cliente c order by c.apellido asc c.nombre asc").list();
+			lista=session.createQuery("from Cliente c order by c.apellido asc c.nombre asc \n").list();
 		
 		} finally {
 			session.close();

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name= "datos.Cuota" table="cuota">
+<id column="idCuota" name="idCuota">
+<generator class="identity"></generator>
+</id>
+<property column="numCuota" name="numCuota" type="integer"></property>
+<property column="fecha" name="fecha" type="calendar"></property>
+<property column="saldoPendiente" name="saldoPendiente" type="float"></property>
+<property column="amortizacion" name="amortizacion" type="float"></property>
+<property column="interesesCuota" name="interesesCuota" type="float"></property>
+<property column="cuota" name="cuota" type="float"></property>
+<property column="deuda" name="deuda" type="float"></property>
+<many-to-one name="prestamo" class="datos.Prestamo" column="idPrestamo" not-null="true"></many-to-one>
+</class>
+</hibernate-mapping>

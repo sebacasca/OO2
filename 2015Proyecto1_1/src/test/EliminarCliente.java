@@ -8,7 +8,7 @@ public class EliminarCliente {
 	public static void main(String[] args) {
 		
 		ClienteABM abm = new ClienteABM();
-		long id=1;
+		long id=12;
 		Cliente c;
 		
 		try {
