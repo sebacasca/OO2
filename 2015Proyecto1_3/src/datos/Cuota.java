@@ -1,21 +1,9 @@
 package datos;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.StringReader;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.GregorianCalendar;
-import java.util.List;
+//import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
 
 public class Cuota {
 	
@@ -24,7 +12,7 @@ public class Cuota {
 	private long idCuota;
 	private static long idSiguiente=0;
 	
-	private int nroCuota;
+	private int numCuota;
 	private static int cuotaSiguiente=0;
 	
 	private GregorianCalendar fecha;
@@ -35,16 +23,16 @@ public class Cuota {
 	private double deuda;
 	private Prestamo prestamo;
 	
-	private List<String> listaFeriados  = new ArrayList<String>();
+	//private List<String> listaFeriados  = new ArrayList<String>();
 	
 	//constructor
 	
 	public Cuota(){}
-	
+
 	public Cuota(GregorianCalendar fecha, double saldoPendiente, double amortizacion, double interesesCuota, double cuota, double deuda, Prestamo prestamo){
 		
-		setId();
-		setnroCuota();
+		setIdCuota();
+		setNroCuota();
 		this.fecha=fecha;
 		this.saldoPendiente=saldoPendiente;
 		this.amortizacion=amortizacion;
@@ -57,19 +45,28 @@ public class Cuota {
 	
 	//getters y setters
 	
+	public int getNumCuota() {
+		return numCuota;
+	}
+
+	public void setNumCuota(int numCuota) {
+		this.numCuota = numCuota;
+	}
+
+	public void setIdCuota(long idCuota) {
+		this.idCuota = idCuota;
+	}
+	
 	public long getIdCuota() {
 		return idCuota;
 	}
-	protected void setId(){
+	protected void setIdCuota(){
 		idSiguiente++;
 		this.idCuota=idSiguiente;}
 	
-	public int getNroCuota() {
-		return nroCuota;
-	}
-	protected void setnroCuota(){
+	protected void setNroCuota(){
 		cuotaSiguiente++;
-		this.nroCuota=cuotaSiguiente;}
+		this.numCuota=cuotaSiguiente;}
 
 
 	public GregorianCalendar getFecha() {
@@ -148,7 +145,7 @@ public class Cuota {
 		
 		String cadena="";
 		
-		cadena= "NRO Cuota: "+this.nroCuota+ "\nFecha VTO: "+ Funcion.traerFechaCorta(this.fecha)+ "\nSaldo Pendiente: "+ this.saldoPendiente
+		cadena= "NRO Cuota: "+this.numCuota+ "\nFecha VTO: "+ Funcion.traerFechaCorta(this.fecha)+ "\nSaldo Pendiente: "+ this.saldoPendiente
 				+"\nAmortizacion: "+ this.amortizacion +"\nInteres: "+this.interesesCuota+ "\nCuota:"+ this.cuota+ "\nDeuda: "+ this.deuda;
 				
 		return cadena;

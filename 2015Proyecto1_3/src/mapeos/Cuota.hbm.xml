@@ -8,11 +8,11 @@
 </id>
 <property column="numCuota" name="numCuota" type="integer"></property>
 <property column="fecha" name="fecha" type="calendar"></property>
-<property column="saldoPendiente" name="saldoPendiente" type="float"></property>
-<property column="amortizacion" name="amortizacion" type="float"></property>
-<property column="interesesCuota" name="interesesCuota" type="float"></property>
-<property column="cuota" name="cuota" type="float"></property>
-<property column="deuda" name="deuda" type="float"></property>
+<property column="saldoPendiente" name="saldoPendiente" type="double"></property>
+<property column="amortizacion" name="amortizacion" type="double"></property>
+<property column="interesesCuota" name="interesesCuota" type="double"></property>
+<property column="cuota" name="cuota" type="double"></property>
+<property column="deuda" name="deuda" type="double"></property>
 <many-to-one name="prestamo" class="datos.Prestamo" column="idPrestamo" not-null="true"></many-to-one>
 </class>
 </hibernate-mapping>

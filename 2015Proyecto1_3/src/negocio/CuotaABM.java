@@ -22,9 +22,9 @@ import datos.Prestamo;
 		}
 
 		
-		public List<Cuota> traerCuotas(Prestamo p) {
+		/*public List<Cuota> traerCuotas(Prestamo p) {
 			
 			return dao.traerCuota(p);
-		}
+		}*/
 
 }

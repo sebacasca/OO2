@@ -95,6 +95,7 @@ public class Cliente {
 	
 	
 	
+	
 	public String toString(){
 		return (idCliente+" "+apellido+" "+nombre+" DNI: "+dni+" F.de Nacimiento:"+Funcion.traerFechaCorta(fechaDeNacimiento)+" "+baja+ "Ingreso: "+ ingreso);
 

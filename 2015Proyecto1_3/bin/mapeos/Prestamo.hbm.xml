@@ -12,7 +12,7 @@
 <property column="cantCuotas" name="cantCuotas" type="int"/>
 <many-to-one name="cliente" class="datos.Cliente"
 column="idCliente" not-null="true"/>
-<set name="cuota" table="cuota" inverse="true" lazy="true" fetch="select">
+<set name="cuotas" table="cuota" inverse="true" lazy="true" fetch="select">
 <key>
 <column name="idCuota" not-null="true" />
 </key>

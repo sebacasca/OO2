@@ -3,6 +3,7 @@ import java.util.*;
 
 import datos.Funcion;
 
+
 public class Prestamo {
 
 	private long idPrestamo;
@@ -11,7 +12,8 @@ public class Prestamo {
 	private double interes;
 	private int cantCuotas;
 	private Cliente cliente;
-	
+	private Set<Cuota> cuotas;
+
 	public Prestamo(){}
 	
 	public Prestamo(GregorianCalendar fecha, double monto, double interes,int cantCuotas, Cliente cliente) {
@@ -70,6 +72,14 @@ public class Prestamo {
 	public void setCliente(Cliente cliente) {
 		
 		this.cliente = cliente;
+	}
+	
+	public Set<Cuota> getCuotas() {
+		return cuotas;
+	}
+
+	public void setCuotas(Set<Cuota> cuotas) {
+		this.cuotas = cuotas;
 	}
 
 	public String toString(){
