@@ -14,7 +14,7 @@ public class TestAgregarCliente {
 		ClienteABM abm=new ClienteABM();
 
 		try {
-			/*long ultimoIdCliente=*/ abm.agregar(apellido, nombre, documento,fechaDeNacimiento);
+			abm.agregar(apellido, nombre, documento,fechaDeNacimiento);
 		
 		} catch (Exception e) {
 			
